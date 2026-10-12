@@ -1,0 +1,18 @@
+# Local datasets and generated outputs
+/data/raw/
+/data/processed/
+/outputs/
+*.ipynb_checkpoints/
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local credentials and secrets
+kaggle.json
+.env
+.env.*
+!.env.example
