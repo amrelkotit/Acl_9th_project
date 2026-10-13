@@ -1,0 +1,15 @@
+table,rows,columns,primary_key,null_PK_rows,duplicate_PK_rows,missing_cells
+circuits,77,9,circuitId,0,0,0
+constructors,212,5,constructorId,0,0,0
+constructor_results,12625,5,constructorResultsId,0,0,12608
+constructor_standings,13391,7,constructorStandingsId,0,0,0
+drivers,861,9,driverId,0,0,1559
+driver_standings,34863,7,driverStandingsId,0,0,0
+races,1125,18,raceId,0,0,11349
+results,26759,18,resultId,0,0,122887
+qualifying,10494,9,qualifyId,0,0,11668
+lap_times,589081,6,"raceId, driverId, lap",0,0,0
+pit_stops,11371,7,"raceId, driverId, stop",0,0,0
+sprint_results,360,16,resultId,0,0,73
+seasons,75,2,year,0,0,0
+status,139,2,statusId,0,0,0
