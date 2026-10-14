@@ -1,0 +1,11 @@
+pandas>=2.2,<3.1
+numpy>=1.26,<3
+scikit-learn>=1.5,<2
+matplotlib>=3.9,<4
+nbformat>=5.10,<6
+nbclient>=0.10,<1
+ipykernel>=6.29,<8
+shap>=0.47,<0.54
+lime==0.2.0.1
+reportlab>=4,<5
+pypdf>=5,<7

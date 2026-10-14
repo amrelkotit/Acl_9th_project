@@ -1,0 +1,17 @@
+{
+  "fresh_kernel_all_cells_executed_without_errors": true,
+  "raw_hashes_unchanged": true,
+  "freeze_manifest_digest_verified": true,
+  "saved_models_reproduce_frozen_test_predictions": true,
+  "imputers_match_training_only_medians": true,
+  "three_models_same_encoded_feature_contract": true,
+  "test_metrics_recomputed_from_predictions": true,
+  "SHAP_probability_reconstruction_verified": true,
+  "all_figures_in_integrated_report": true,
+  "future_outcome_and_standings_invariance": true,
+  "analysis_figure_count": 26,
+  "code_cell_count": 37,
+  "Kaggle_runtime_verified": false,
+  "all_member_review_verified": false,
+  "official_submission_verified": false
+}

@@ -10,6 +10,11 @@ venv/
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.deps/
+.jupyter/
+.mplconfig/
+/data/*.zip
+/backups/
 
 # Local credentials and secrets
 kaggle.json

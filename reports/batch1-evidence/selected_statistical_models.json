@@ -1,0 +1,16 @@
+{
+  "Logistic regression": {
+    "threshold": 0.32999999999999996,
+    "parameters": {
+      "C": 1.0
+    }
+  },
+  "Random forest": {
+    "threshold": 0.48999999999999994,
+    "parameters": {
+      "max_depth": 12,
+      "min_samples_leaf": 3,
+      "n_estimators": 250
+    }
+  }
+}

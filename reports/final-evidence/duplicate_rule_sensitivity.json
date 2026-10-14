@@ -1,0 +1,8 @@
+{
+  "duplicate_driver_race_groups": 82,
+  "alternate_rule": "Smallest resultId only; no target-based selection",
+  "changed_source_rows": 0,
+  "changed_podium_labels": 0,
+  "changed_rows_in_2003_2024_model_window": 0,
+  "limitation": "Sensitivity is not independent ground-truth reconstruction of the historical starting car."
+}

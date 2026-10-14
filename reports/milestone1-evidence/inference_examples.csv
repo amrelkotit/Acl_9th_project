@@ -1,0 +1,7 @@
+record_kind,model,podium_probability,threshold,predicted_podium
+complete,Logistic regression,0.7347713283039875,0.32999999999999996,1
+partially_missing,Logistic regression,0.11687647583428316,0.32999999999999996,0
+complete,Random forest,0.7734225070079116,0.48999999999999994,1
+partially_missing,Random forest,0.4825097186901537,0.48999999999999994,0
+complete,Shallow neural network,0.7861646483160112,0.48999999999999994,1
+partially_missing,Shallow neural network,0.5901565049059146,0.48999999999999994,1

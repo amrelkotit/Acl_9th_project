@@ -1,0 +1,11 @@
+{
+  "raw_result_rows": 26759,
+  "excluded_non_qualifiers": 1365,
+  "excluded_documented_non_starts": 257,
+  "ambiguous_starts_withheld": 38,
+  "duplicate_rows_removed": 88,
+  "eligible_driver_race_rows": 25011,
+  "retained_grid_zero_rows": 72,
+  "rule": "Prefer positive-grid source row; break ties by smallest resultId, never by finishing position.",
+  "limitation": "Results do not independently verify every DNS or pit-lane start. Positive-grid zero-lap engine/accident cases may include start-line failures. Cohort is conditional on reconstructed race starters."
+}

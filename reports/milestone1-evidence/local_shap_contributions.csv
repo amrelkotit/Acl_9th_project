@@ -1,0 +1,15 @@
+feature,contribution
+grid_position,0.19758032867943331
+grid_zero_flag,0.0
+qualifying_position,0.15694751212351946
+q1_gap_to_best,0.05304111041887921
+driver_form_podium_last5,0.05325588294932831
+driver_form_finish_last5,0.04552356735404572
+constructor_form_podium_last5,0.05370035019555062
+driver_standings_points_before,-0.009304015638523129
+driver_standings_rank_before,0.02092994071664292
+constructor_standings_points_before,-0.0006033272199128942
+constructor_standings_rank_before,0.04272317825620225
+round,0.016458263172829134
+constructorId,0.02298505066950355
+circuitId,0.001803905218539017

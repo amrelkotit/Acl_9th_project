@@ -1,0 +1,140 @@
+statusId,status,group,rule
+1,Finished,finished,Not counted as a proven mechanical failure
+2,Disqualified,accident_driver_regulation,Not counted as a proven mechanical failure
+3,Accident,accident_driver_regulation,Not counted as a proven mechanical failure
+4,Collision,accident_driver_regulation,Not counted as a proven mechanical failure
+5,Engine,mechanical,Explicit component failure / mechanical system; conservative mapping
+6,Gearbox,mechanical,Explicit component failure / mechanical system; conservative mapping
+7,Transmission,mechanical,Explicit component failure / mechanical system; conservative mapping
+8,Clutch,mechanical,Explicit component failure / mechanical system; conservative mapping
+9,Hydraulics,mechanical,Explicit component failure / mechanical system; conservative mapping
+10,Electrical,mechanical,Explicit component failure / mechanical system; conservative mapping
+11,+1 Lap,finished,Not counted as a proven mechanical failure
+12,+2 Laps,finished,Not counted as a proven mechanical failure
+13,+3 Laps,finished,Not counted as a proven mechanical failure
+14,+4 Laps,finished,Not counted as a proven mechanical failure
+15,+5 Laps,finished,Not counted as a proven mechanical failure
+16,+6 Laps,finished,Not counted as a proven mechanical failure
+17,+7 Laps,finished,Not counted as a proven mechanical failure
+18,+8 Laps,finished,Not counted as a proven mechanical failure
+19,+9 Laps,finished,Not counted as a proven mechanical failure
+20,Spun off,accident_driver_regulation,Not counted as a proven mechanical failure
+21,Radiator,mechanical,Explicit component failure / mechanical system; conservative mapping
+22,Suspension,mechanical,Explicit component failure / mechanical system; conservative mapping
+23,Brakes,mechanical,Explicit component failure / mechanical system; conservative mapping
+24,Differential,mechanical,Explicit component failure / mechanical system; conservative mapping
+25,Overheating,mechanical,Explicit component failure / mechanical system; conservative mapping
+26,Mechanical,mechanical,Explicit component failure / mechanical system; conservative mapping
+27,Tyre,ambiguous_or_other,Not counted as a proven mechanical failure
+28,Driver Seat,ambiguous_or_other,Not counted as a proven mechanical failure
+29,Puncture,ambiguous_or_other,Not counted as a proven mechanical failure
+30,Driveshaft,mechanical,Explicit component failure / mechanical system; conservative mapping
+31,Retired,ambiguous_or_other,Not counted as a proven mechanical failure
+32,Fuel pressure,mechanical,Explicit component failure / mechanical system; conservative mapping
+33,Front wing,ambiguous_or_other,Not counted as a proven mechanical failure
+34,Water pressure,mechanical,Explicit component failure / mechanical system; conservative mapping
+35,Refuelling,ambiguous_or_other,Not counted as a proven mechanical failure
+36,Wheel,ambiguous_or_other,Not counted as a proven mechanical failure
+37,Throttle,mechanical,Explicit component failure / mechanical system; conservative mapping
+38,Steering,mechanical,Explicit component failure / mechanical system; conservative mapping
+39,Technical,ambiguous_or_other,Not counted as a proven mechanical failure
+40,Electronics,mechanical,Explicit component failure / mechanical system; conservative mapping
+41,Broken wing,ambiguous_or_other,Not counted as a proven mechanical failure
+42,Heat shield fire,mechanical,Explicit component failure / mechanical system; conservative mapping
+43,Exhaust,mechanical,Explicit component failure / mechanical system; conservative mapping
+44,Oil leak,mechanical,Explicit component failure / mechanical system; conservative mapping
+45,+11 Laps,finished,Not counted as a proven mechanical failure
+46,Wheel rim,ambiguous_or_other,Not counted as a proven mechanical failure
+47,Water leak,mechanical,Explicit component failure / mechanical system; conservative mapping
+48,Fuel pump,mechanical,Explicit component failure / mechanical system; conservative mapping
+49,Track rod,mechanical,Explicit component failure / mechanical system; conservative mapping
+50,+17 Laps,finished,Not counted as a proven mechanical failure
+51,Oil pressure,mechanical,Explicit component failure / mechanical system; conservative mapping
+128,+42 Laps,finished,Not counted as a proven mechanical failure
+53,+13 Laps,finished,Not counted as a proven mechanical failure
+54,Withdrew,non_start_or_exclusion,Not counted as a proven mechanical failure
+55,+12 Laps,finished,Not counted as a proven mechanical failure
+56,Engine fire,mechanical,Explicit component failure / mechanical system; conservative mapping
+129,Engine misfire,mechanical,Explicit component failure / mechanical system; conservative mapping
+58,+26 Laps,finished,Not counted as a proven mechanical failure
+59,Tyre puncture,ambiguous_or_other,Not counted as a proven mechanical failure
+60,Out of fuel,ambiguous_or_other,Not counted as a proven mechanical failure
+61,Wheel nut,ambiguous_or_other,Not counted as a proven mechanical failure
+62,Not classified,ambiguous_or_other,Not counted as a proven mechanical failure
+63,Pneumatics,mechanical,Explicit component failure / mechanical system; conservative mapping
+64,Handling,ambiguous_or_other,Not counted as a proven mechanical failure
+65,Rear wing,ambiguous_or_other,Not counted as a proven mechanical failure
+66,Fire,ambiguous_or_other,Not counted as a proven mechanical failure
+67,Wheel bearing,mechanical,Explicit component failure / mechanical system; conservative mapping
+68,Physical,accident_driver_regulation,Not counted as a proven mechanical failure
+69,Fuel system,mechanical,Explicit component failure / mechanical system; conservative mapping
+70,Oil line,mechanical,Explicit component failure / mechanical system; conservative mapping
+71,Fuel rig,ambiguous_or_other,Not counted as a proven mechanical failure
+72,Launch control,mechanical,Explicit component failure / mechanical system; conservative mapping
+73,Injured,accident_driver_regulation,Not counted as a proven mechanical failure
+74,Fuel,ambiguous_or_other,Not counted as a proven mechanical failure
+75,Power loss,mechanical,Explicit component failure / mechanical system; conservative mapping
+76,Vibrations,ambiguous_or_other,Not counted as a proven mechanical failure
+77,107% Rule,non_start_or_exclusion,Not counted as a proven mechanical failure
+78,Safety,ambiguous_or_other,Not counted as a proven mechanical failure
+79,Drivetrain,mechanical,Explicit component failure / mechanical system; conservative mapping
+80,Ignition,mechanical,Explicit component failure / mechanical system; conservative mapping
+81,Did not qualify,non_start_or_exclusion,Not counted as a proven mechanical failure
+82,Injury,accident_driver_regulation,Not counted as a proven mechanical failure
+83,Chassis,ambiguous_or_other,Not counted as a proven mechanical failure
+84,Battery,mechanical,Explicit component failure / mechanical system; conservative mapping
+85,Stalled,ambiguous_or_other,Not counted as a proven mechanical failure
+86,Halfshaft,mechanical,Explicit component failure / mechanical system; conservative mapping
+87,Crankshaft,mechanical,Explicit component failure / mechanical system; conservative mapping
+88,+10 Laps,finished,Not counted as a proven mechanical failure
+89,Safety concerns,ambiguous_or_other,Not counted as a proven mechanical failure
+90,Not restarted,ambiguous_or_other,Not counted as a proven mechanical failure
+91,Alternator,mechanical,Explicit component failure / mechanical system; conservative mapping
+92,Underweight,accident_driver_regulation,Not counted as a proven mechanical failure
+93,Safety belt,ambiguous_or_other,Not counted as a proven mechanical failure
+94,Oil pump,mechanical,Explicit component failure / mechanical system; conservative mapping
+95,Fuel leak,mechanical,Explicit component failure / mechanical system; conservative mapping
+96,Excluded,non_start_or_exclusion,Not counted as a proven mechanical failure
+97,Did not prequalify,non_start_or_exclusion,Not counted as a proven mechanical failure
+98,Injection,mechanical,Explicit component failure / mechanical system; conservative mapping
+99,Distributor,mechanical,Explicit component failure / mechanical system; conservative mapping
+100,Driver unwell,accident_driver_regulation,Not counted as a proven mechanical failure
+101,Turbo,mechanical,Explicit component failure / mechanical system; conservative mapping
+102,CV joint,mechanical,Explicit component failure / mechanical system; conservative mapping
+103,Water pump,mechanical,Explicit component failure / mechanical system; conservative mapping
+104,Fatal accident,accident_driver_regulation,Not counted as a proven mechanical failure
+105,Spark plugs,mechanical,Explicit component failure / mechanical system; conservative mapping
+106,Fuel pipe,mechanical,Explicit component failure / mechanical system; conservative mapping
+107,Eye injury,accident_driver_regulation,Not counted as a proven mechanical failure
+108,Oil pipe,mechanical,Explicit component failure / mechanical system; conservative mapping
+109,Axle,mechanical,Explicit component failure / mechanical system; conservative mapping
+110,Water pipe,mechanical,Explicit component failure / mechanical system; conservative mapping
+111,+14 Laps,finished,Not counted as a proven mechanical failure
+112,+15 Laps,finished,Not counted as a proven mechanical failure
+113,+25 Laps,finished,Not counted as a proven mechanical failure
+114,+18 Laps,finished,Not counted as a proven mechanical failure
+115,+22 Laps,finished,Not counted as a proven mechanical failure
+116,+16 Laps,finished,Not counted as a proven mechanical failure
+117,+24 Laps,finished,Not counted as a proven mechanical failure
+118,+29 Laps,finished,Not counted as a proven mechanical failure
+119,+23 Laps,finished,Not counted as a proven mechanical failure
+120,+21 Laps,finished,Not counted as a proven mechanical failure
+121,Magneto,mechanical,Explicit component failure / mechanical system; conservative mapping
+122,+44 Laps,finished,Not counted as a proven mechanical failure
+123,+30 Laps,finished,Not counted as a proven mechanical failure
+124,+19 Laps,finished,Not counted as a proven mechanical failure
+125,+46 Laps,finished,Not counted as a proven mechanical failure
+126,Supercharger,mechanical,Explicit component failure / mechanical system; conservative mapping
+127,+20 Laps,finished,Not counted as a proven mechanical failure
+130,Collision damage,accident_driver_regulation,Not counted as a proven mechanical failure
+131,Power Unit,mechanical,Explicit component failure / mechanical system; conservative mapping
+132,ERS,mechanical,Explicit component failure / mechanical system; conservative mapping
+133,+49 Laps,finished,Not counted as a proven mechanical failure
+134,+38 Laps,finished,Not counted as a proven mechanical failure
+135,Brake duct,ambiguous_or_other,Not counted as a proven mechanical failure
+136,Seat,ambiguous_or_other,Not counted as a proven mechanical failure
+137,Damage,ambiguous_or_other,Not counted as a proven mechanical failure
+138,Debris,ambiguous_or_other,Not counted as a proven mechanical failure
+139,Illness,accident_driver_regulation,Not counted as a proven mechanical failure
+140,Undertray,ambiguous_or_other,Not counted as a proven mechanical failure
+141,Cooling system,mechanical,Explicit component failure / mechanical system; conservative mapping

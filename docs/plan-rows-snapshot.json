@@ -1,0 +1,287 @@
+{
+  "source": "https://www.notion.so/3f7d34a5d89d8109be93e6df20766856",
+  "captured_date": "2026-10-14",
+  "note": "Internal target text is not a newly inferred course deadline. Original owners and unverified Done cells preserved.",
+  "rows": [
+    {
+      "row": 1,
+      "requirement": "Set up the shared repository, notebook and report structure, and contribution workflow; confirm access for all four members.",
+      "owner": "Karim Ahmed Mahmoud Abdelmageed",
+      "internal_target": "Oct 10",
+      "Done": ""
+    },
+    {
+      "row": 2,
+      "requirement": "Inventory the F1 tables and document columns, keys, foreign-key relationships, sentinels, and missingness.",
+      "owner": "Amr Hazem Mohamed Mohamed Hassan Elkotit",
+      "internal_target": "Oct 11",
+      "Done": ""
+    },
+    {
+      "row": 3,
+      "requirement": "Clean working copies, apply semantic types, check key integrity and duplicate driver-race rows, and create before/after EDA plots. Keep raw CSVs unchanged.",
+      "owner": "Amr Hazem Mohamed Mohamed Hassan Elkotit",
+      "internal_target": "Oct 12",
+      "Done": ""
+    },
+    {
+      "row": 4,
+      "requirement": "Build the modeling cohort and one-row-per-driver-per-race table. Document non-starters, non-qualifiers, pit-lane starters, and the shared-drive duplicate rule.",
+      "owner": "Mark Bassem Mourad Samoel Emira",
+      "internal_target": "Oct 12",
+      "Done": ""
+    },
+    {
+      "row": 5,
+      "requirement": "Engineer pre-race features, justify their validity, and implement the chronological train, validation, and test split.",
+      "owner": "Mark Bassem Mourad Samoel Emira",
+      "internal_target": "Oct 13",
+      "Done": ""
+    },
+    {
+      "row": 6,
+      "requirement": "Answer the front-row-to-podium question by circuit and era; distinguish qualifying position from grid position and include a figure.",
+      "owner": "Loay Mohamed Sabry Farag Ismail",
+      "internal_target": "Oct 13",
+      "Done": ""
+    },
+    {
+      "row": 7,
+      "requirement": "Answer the home-race question while controlling for starting position; explain the joins and include a figure.",
+      "owner": "Loay Mohamed Sabry Farag Ismail",
+      "internal_target": "Oct 14",
+      "Done": ""
+    },
+    {
+      "row": 8,
+      "requirement": "Answer the mechanical-retirement question for the two specified periods; document status grouping and include a figure.",
+      "owner": "Loay Mohamed Sabry Farag Ismail",
+      "internal_target": "Oct 14",
+      "Done": ""
+    },
+    {
+      "row": 9,
+      "requirement": "Train and evaluate logistic regression; record its metrics and interpretation.",
+      "owner": "Mark Bassem Mourad Samoel Emira",
+      "internal_target": "Oct 15",
+      "Done": ""
+    },
+    {
+      "row": 10,
+      "requirement": "Train and evaluate random forest on the same rows and features; compare it with logistic regression and write the model-comparison report section.",
+      "owner": "Mark Bassem Mourad Samoel Emira",
+      "internal_target": "Oct 15",
+      "Done": ""
+    },
+    {
+      "row": 11,
+      "requirement": "Train and evaluate a shallow neural network on the same modeling table and feature set.",
+      "owner": "Karim Ahmed Mahmoud Abdelmageed",
+      "internal_target": "Oct 15",
+      "Done": ""
+    },
+    {
+      "row": 12,
+      "requirement": "Run feature-group ablation and two preprocessing-order experiments; show comparative results and explain the findings.",
+      "owner": "Amr Hazem Mohamed Mohamed Hassan Elkotit",
+      "internal_target": "Oct 16",
+      "Done": ""
+    },
+    {
+      "row": 13,
+      "requirement": "Plot global permutation importance and SHAP, provide one local SHAP or LIME explanation, and demonstrate inference on complete and partially missing records.",
+      "owner": "Karim Ahmed Mahmoud Abdelmageed",
+      "internal_target": "Oct 16",
+      "Done": ""
+    },
+    {
+      "row": 14,
+      "requirement": "Write the report sections for data inventory, cleaning, duplicate handling, EDA, ablation, and preprocessing experiments.",
+      "owner": "Amr Hazem Mohamed Mohamed Hassan Elkotit",
+      "internal_target": "Oct 17",
+      "Done": ""
+    },
+    {
+      "row": 15,
+      "requirement": "Write the report section for all three data-engineering answers, with figures and explanations of joins, grain, missingness, and relevant limitations.",
+      "owner": "Loay Mohamed Sabry Farag Ismail",
+      "internal_target": "Oct 17",
+      "Done": ""
+    },
+    {
+      "row": 16,
+      "requirement": "All members review the notebook and report; confirm the notebook runs top-to-bottom, Kaggle and GitHub links are accessible, and the report PDF is ready. Submit through the official form and save confirmation.",
+      "owner": "All four; Karim Ahmed Mahmoud Abdelmageed coordinates",
+      "internal_target": "Oct 18",
+      "Done": ""
+    },
+    {
+      "row": 17,
+      "requirement": "Acceptance check: define the target as positionOrder \\<= 3; verify exactly one row per (raceId, driverId); document and justify the cohort, shared-drive duplicate rule, and treatment of starters, pit-lane starters, non-starters, and non-qualifiers.",
+      "owner": "All four",
+      "internal_target": "Oct 18",
+      "Done": ""
+    },
+    {
+      "row": 18,
+      "requirement": "Acceptance check: document evidence that every feature is available after qualifying and before race start. Exclude current-race/post-race information; shift standings and calculate form from prior races only. Document whether sprint data is used and verify its availability by the cutoff under that season's format.",
+      "owner": "All four",
+      "internal_target": "Oct 18",
+      "Done": ""
+    },
+    {
+      "row": 19,
+      "requirement": "Acceptance check: compare logistic regression, random forest, and a shallow neural network on the same rows and features. Report accuracy, precision, recall, F1, ROC-AUC, and PR-AUC on training, validation, and unseen test data. Justify primary and secondary metrics; choose thresholds and hyperparameters using training/validation only.",
+      "owner": "All four",
+      "internal_target": "Oct 18",
+      "Done": ""
+    },
+    {
+      "row": 20,
+      "requirement": "Acceptance check: show at least three distinct modeling attempts with a statistical ML model or shallow feed-forward neural network as baseline; report feature-group ablation and at least two preprocessing-order experiments with comparative results and explanations.",
+      "owner": "All four",
+      "internal_target": "Oct 18",
+      "Done": ""
+    },
+    {
+      "row": 21,
+      "requirement": "Acceptance check: include all three data-engineering answers in both notebook and report, with figures and explanations of joins, grain, missingness, and limitations. Ensure the report also includes feature choices and cutoff validity, model comparison, metrics and metric rationale, experiments, and known limitations.",
+      "owner": "All four",
+      "internal_target": "Oct 18",
+      "Done": ""
+    },
+    {
+      "row": 22,
+      "requirement": "Acceptance check: plot and interpret global permutation importance and SHAP, include at least one local LIME or local SHAP explanation, state explanations show model reliance rather than causation, and demonstrate inference on complete and partially missing records.",
+      "owner": "All four",
+      "internal_target": "Oct 18",
+      "Done": ""
+    },
+    {
+      "row": 23,
+      "requirement": "Acceptance check: run the notebook top-to-bottom with Run All and confirm it completes without hidden manual steps; verify report PDF, accessible Kaggle and GitHub links, submission through the official form, and saved confirmation.",
+      "owner": "All four",
+      "internal_target": "Oct 18",
+      "Done": ""
+    },
+    {
+      "row": 24,
+      "requirement": "Mark a row Done only after its implementation or deliverable has been reviewed and evidence is present in the notebook, report, or submission confirmation.",
+      "owner": "All four",
+      "internal_target": "Oct 18",
+      "Done": ""
+    },
+    {
+      "row": 25,
+      "requirement": "Feature-selection evidence: create a feature register documenting each selected feature's source tables, calculation, availability at the pre-race cutoff, and supporting EDA plot, statistic, or experiment. Explicitly implement leakage-safe form and document standings, grid, and qualifying features. Keep empirical trials visible in separate notebook cells/sections.",
+      "owner": "Existing feature owner; all four verify",
+      "internal_target": "Before final review",
+      "Done": ""
+    },
+    {
+      "row": 26,
+      "requirement": "Preprocessing evidence: specify at least two preprocessing-order comparisons, record the operations and their order, and show their effects on data distributions, ranges, and values. Compare downstream metrics on the same split and modeling cohort, explain the findings, and remove/retrain one feature group at a time for ablation.",
+      "owner": "Existing experiment owner; all four verify",
+      "internal_target": "Before final review",
+      "Done": ""
+    },
+    {
+      "row": 27,
+      "requirement": "Notebook/report figure check: include every plot and all three data-engineering answers in both the notebook and structured PDF report. Check EDA, feature effects, preprocessing effects, model-performance plots, experimental comparisons, and global/local XAI. Support each conclusion with a plot, statistic, or controlled experiment.",
+      "owner": "All four",
+      "internal_target": "Before final review",
+      "Done": ""
+    },
+    {
+      "row": 28,
+      "requirement": "Model documentation: explicitly designate and justify a baseline, such as logistic regression; explain how each statistical model and the neural network works, its limitations, settings, and comparison with the baseline. Specify roughly 1–2 hidden layers for the shallow neural network; retain at least three distinct modeling attempts.",
+      "owner": "Existing model owners; all four verify",
+      "internal_target": "Before final review",
+      "Done": ""
+    },
+    {
+      "row": 29,
+      "requirement": "Inference deliverable: implement a reusable callable inference function using the fitted preprocessing and model. Demonstrate it on one complete and one partially missing record, preserving feature order and encoding and returning an interpretable podium prediction/probability without fitting again on the input.",
+      "owner": "Existing inference owner; all four verify",
+      "internal_target": "Before final review",
+      "Done": ""
+    },
+    {
+      "row": 30,
+      "requirement": "Implemented data-audit checks: replace sentinels such as the literal string \\\\N; convert dates and durations to semantic types; verify primary keys are unique and non-null and foreign keys reconcile. Record row counts before/after joins, cleaning, and deduplication; assert one row per (raceId, driverId). Keep raw CSVs unchanged.",
+      "owner": "Existing cleaning/cohort owners; all four verify",
+      "internal_target": "Before final review",
+      "Done": ""
+    },
+    {
+      "row": 31,
+      "requirement": "Evaluation preparation: hold a walkthrough/mock evaluation in which every member can explain and justify cleaning, feature engineering, model choices and limitations, primary/secondary metrics, experiments, and XAI with project evidence. Check official announcements for evaluation dates and slot reservation; an AI suggestion alone is not a justification.",
+      "owner": "All four",
+      "internal_target": "Before evaluation; date not confirmed",
+      "Done": ""
+    },
+    {
+      "row": 32,
+      "requirement": "Question 1 definition: use actual starting grid positions 1 and 2 for front-row starts, distinguish these from qualifying positions, and calculate podium conversions divided by front-row starts for each circuit. Explicitly compare circuit rankings before 2014 and from 2014 onward; document era boundaries, counts, missingness, multi-hop joins, grain, and the figure.",
+      "owner": "Existing data-engineering owner; all four verify",
+      "internal_target": "Before final review",
+      "Done": ""
+    },
+    {
+      "row": 33,
+      "requirement": "Question 2 definition: document driver-nationality-to-circuit-country mapping and the actual method for controlling starting grid position. Compare home/away podium outcomes under that control, not only raw percentages; document joins, missing mappings, counts, grain, and the figure. If early years are included, justify inclusion/exclusion of Indianapolis 500 entries; exclusion is optional.",
+      "owner": "Existing data-engineering owner; all four verify",
+      "internal_target": "Before final review",
+      "Done": ""
+    },
+    {
+      "row": 34,
+      "requirement": "Question 3 definition: compare constructors' mechanical-retirement rates in 2014–2021 versus 2022–2024, using mechanical retirements divided by constructor race starts. Document the status mapping and ambiguous cases; exclude crashes, driver causes, regulatory decisions, and non-starts from mechanical retirements. Finished and lapped finishers are not retirements. Show counts, multi-hop joins, and a figure.",
+      "owner": "Existing data-engineering owner; all four verify",
+      "internal_target": "Before final review",
+      "Done": ""
+    },
+    {
+      "row": 35,
+      "requirement": "Historical-data checks: plot qualifying coverage by season and justify imputation, a grid fallback, or a restricted training window. Document structurally missing later qualifying sessions, era sensitivity, and cohort limitations. Track constructor history using constructorId and document identity changes/history resets and driver team changes.",
+      "owner": "Existing EDA/feature owners; all four verify",
+      "internal_target": "Before final review",
+      "Done": ""
+    },
+    {
+      "row": 36,
+      "requirement": "Metric wording needs verification: the brief explicitly lists ROC-AUC, PR-AUC, and F1, but its deliverables refer to five metrics. Retain the plan's six metrics (accuracy, precision, recall, F1, ROC-AUC, PR-AUC) for every model and split, with primary/secondary rationale; flag the intended five for course clarification rather than treating the ambiguity as resolved.",
+      "owner": "Existing model owners; all four verify",
+      "internal_target": "Before final review",
+      "Done": ""
+    },
+    {
+      "row": 37,
+      "requirement": "Local-XAI wording needs verification: detailed instructions allow LIME or local SHAP, while the final checklist names LIME. Retain global permutation importance and SHAP; include a plotted/interpreted local LIME example as a precaution covering both wordings, alongside local SHAP if used, or obtain official clarification. Explain model reliance rather than causation.",
+      "owner": "Existing XAI owner; all four verify",
+      "internal_target": "Before final review",
+      "Done": ""
+    },
+    {
+      "row": 38,
+      "requirement": "Leakage safeguard: fit learned imputers, encoders, scalers, and feature-selection transformations using training data only, then apply the fitted transformations to validation/test data. Use training/validation only for choices about features, preprocessing, thresholds, and hyperparameters; preserve the unseen test set for final evaluation.",
+      "owner": "Existing feature/model owners; all four verify",
+      "internal_target": "Before final evaluation",
+      "Done": ""
+    },
+    {
+      "row": 39,
+      "requirement": "Reproducibility safeguard: restart the kernel and Run All in the final Kaggle environment, verifying dependencies, data paths, execution order, and absence of hidden manual steps. Confirm generated metrics/figures match the submitted PDF and final repository/notebook version, and verify accessible submission links and saved confirmation.",
+      "owner": "All four; existing submission coordinator",
+      "internal_target": "Before submission",
+      "Done": ""
+    },
+    {
+      "row": 40,
+      "requirement": "Plan/evidence clarification: rows 1–16 are team work packages, not the official brief's numbering; rows 17–24 are acceptance checks and these appended rows add detail. Keep the existing assignments and record notebook section/report page or submission evidence before marking any item Done. Confirm actual progress against internal targets; a blank cell means unverified. Complete compliance requires verified deliverables and justification; the PDFs specify no required accuracy/AUC score.",
+      "owner": "All four",
+      "internal_target": "During review and before submission",
+      "Done": ""
+    }
+  ]
+}

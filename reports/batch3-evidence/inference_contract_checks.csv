@@ -1,0 +1,26 @@
+model,case,expected,passed
+Logistic regression,reordered_fields,finite frozen prediction,True
+Logistic regression,partially_missing,finite frozen prediction,True
+Logistic regression,unseen_categories,finite frozen prediction,True
+Logistic regression,minimal_missing_record,finite frozen prediction,True
+Logistic regression,empty,reject invalid input,True
+Logistic regression,unknown_field,reject invalid input,True
+Logistic regression,infinity,reject invalid input,True
+Logistic regression,invalid_numeric,reject invalid input,True
+Random forest,reordered_fields,finite frozen prediction,True
+Random forest,partially_missing,finite frozen prediction,True
+Random forest,unseen_categories,finite frozen prediction,True
+Random forest,minimal_missing_record,finite frozen prediction,True
+Random forest,empty,reject invalid input,True
+Random forest,unknown_field,reject invalid input,True
+Random forest,infinity,reject invalid input,True
+Random forest,invalid_numeric,reject invalid input,True
+Shallow neural network,reordered_fields,finite frozen prediction,True
+Shallow neural network,partially_missing,finite frozen prediction,True
+Shallow neural network,unseen_categories,finite frozen prediction,True
+Shallow neural network,minimal_missing_record,finite frozen prediction,True
+Shallow neural network,empty,reject invalid input,True
+Shallow neural network,unknown_field,reject invalid input,True
+Shallow neural network,infinity,reject invalid input,True
+Shallow neural network,invalid_numeric,reject invalid input,True
+unknown,unknown_model,reject invalid input,True
