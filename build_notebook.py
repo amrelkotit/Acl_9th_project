@@ -6,7 +6,8 @@ sys.path.insert(0,str(Path(__file__).parent/'.deps'))
 import nbformat as nbf
 
 root = Path(__file__).parent
-batch3_enabled = '--batch3' in sys.argv
+final_enabled = '--final' in sys.argv
+batch3_enabled = '--batch3' in sys.argv or final_enabled
 batch2_enabled = '--batch2' in sys.argv or batch3_enabled
 source = (root/'src'/'batch1.py').read_text(encoding='utf-8')
 report_source = (root/'src'/'batch1_report.py').read_text(encoding='utf-8')
@@ -76,6 +77,10 @@ stage('9–10. Logistic regression and random forest',
  'Use identical rows and features with train-only fitted preprocessing. Logistic regression is the baseline. Select hyperparameters by validation average precision (AP); select thresholds by validation F1. Report trapezoidal PR-AUC and AP separately. Do not evaluate the reserved test yet: freeze choices after the remaining models/experiments.',
  ['make_preprocessor','metrics','train_statistical_models'],
  'statistical_models, model_metrics, model_trials = train_statistical_models(model, numeric_features, categorical_features, OUT)\ndisplay(model_trials)\ndisplay(model_metrics)')
+if final_enabled:
+    for label in ['Logistic regression','Random forest']:
+        cells.append(nbf.v4.new_markdown_cell('## Modeling attempt: '+label+'\n\nThe fitting code above records every training/validation candidate. This separate review cell exposes this approach’s measured trials and split metrics; it does not refit or select using test scores.'))
+        cells.append(nbf.v4.new_code_cell(f'display(model_trials.loc[model_trials.model.eq({label!r})])\ndisplay(model_metrics.loc[model_metrics.model.eq({label!r})])'))
 stage('Batch 1 interpretation and report section',
  'The following report is generated from this run’s evidence. It is a draft for the first batch, not a completed submission.',
  ['verify_raw_unchanged'],
@@ -105,6 +110,10 @@ if batch2_enabled:
         'Retrain a fixed random forest after removing each of the six feature groups separately. Keep rows, RF settings and decision threshold fixed. Experiment 1 compares imputation/scaling orders; experiment 2 compares clipping/scaling orders after imputation. Both order variants use a fixed logistic-regression model and omit numeric missing indicators to isolate the comparison at equal dimension. Bounds/statistics are learned on training only.',
         ['feature_group_ablation','preprocessing_order_experiments','feature_detail_plots'],
         'ablation_results = feature_group_ablation(model, numeric_features, categorical_features, feature_register, all_models, OUT)\norder_results, distribution_effects = preprocessing_order_experiments(model, numeric_features, categorical_features, all_models, OUT)\nfeature_detail_names = feature_detail_plots(model, numeric_features, categorical_features, OUT)')
+    if final_enabled:
+        for experiment in ['1','2']:
+            cells.append(nbf.v4.new_markdown_cell('## Preprocessing-order attempt '+experiment+'\n\nSeparate comparative evidence from the controlled experiment above. All fitted statistics use training only; model settings, rows and threshold are fixed.'))
+            cells.append(nbf.v4.new_code_cell(f'display(order_results.loc[order_results.experiment.astype(str).eq({experiment!r})])\ndisplay(distribution_effects.loc[distribution_effects.experiment.astype(str).eq({experiment!r}) & distribution_effects.feature.eq("q1_gap_to_best")])'))
     stage2('13a. Inference on complete and partially missing pre-race records',
         'The callable consumes engineered pre-race features, uses the fitted pipeline without refitting, handles missing fields, and rejects unknown/outcome columns. Demonstrate both records for every model and verify fitted-model hashes remain unchanged. Scores are not asserted to be calibrated probabilities.',
         ['podium_inference','inference_demonstration'],
@@ -133,6 +142,12 @@ if batch3_enabled:
     cells.append(nbf.v4.new_code_cell((root/'src'/'batch3.py').read_text(encoding='utf-8')))
     cells.append(nbf.v4.new_code_cell('accuracy_target_results, final_feature_register, inference_contract_checks, batch3_summary = run_batch3_acceptance(model, numeric_features, categorical_features, all_models, OUT, DATA_DIR)\ndisplay(accuracy_target_results.loc[accuracy_target_results.split.eq("test"), ["model","accuracy","always_no_podium_accuracy","accuracy_lift_percentage_points","precision","recall","F1","meets_user_accuracy_target"]])\ndisplay(final_feature_register)\ndisplay(inference_contract_checks)'))
     cells.append(nbf.v4.new_markdown_cell('## Handoff after rows 21–30\n\nRun verify_batch3.py locally to bind notebook/report/PDF hashes and produce the coverage matrix. The original owner assignments and Done cells require member review. Row 23 remains partial until Kaggle Run All, accessible team links, official submission and confirmation are verified. Remaining ten-row batch: 31–40. The test set has been revealed; no further tuning may use its scores.'))
+if final_enabled:
+    cells[0].source=cells[0].source.replace('work packages 1–20; acceptance rows 21–30','work packages and checks 1–40 (external sign-off pending)')
+    cells[-1]=nbf.v4.new_markdown_cell('## Final batch: rows 31–40\n\nIndependent historical recounts, grid-control/era sensitivity, duplicate-rule sensitivity, qualifying coverage, constructor history and runtime evidence follow. These descriptive checks do not tune frozen models. The final report addendum incorporates the results. Team walkthrough/review, Kaggle Run All and official submission cannot be inferred from local execution.')
+    cells.append(nbf.v4.new_code_cell((root/'src/batch4.py').read_text(encoding='utf-8')))
+    cells.append(nbf.v4.new_code_cell('home_sensitivity, era_coverage, mechanical_sensitivity, final_checks = final_historical_checks(cohort, clean, model, OUT)\ndisplay(home_sensitivity)\ndisplay(era_coverage)\ndisplay(mechanical_sensitivity)\nfinal_report = write_final_report(OUT)\ndisplay(Markdown(re.sub(r"!\\[[^]]*\\]\\([^)]*\\)", "[Figure displayed above]", final_report)))'))
+    cells.append(nbf.v4.new_markdown_cell('## Final handoff\n\nLocal implementation/checks cover all 40 plan rows. See the final compliance matrix and evaluation guide for evidence and actual member sign-off. The ≥80% ordinary test-accuracy target is met. Preserve the model-choice lock; do not tune against revealed test results. Final Kaggle execution, team review/access and official submission/confirmation remain pending until independently verified.'))
 nb = nbf.v4.new_notebook(cells=cells,metadata={'kernelspec':{'display_name':'Python 3','language':'python','name':'python3'},'language_info':{'name':'python','version':'3.12'}})
 target = root/'notebooks'/'milestone1.ipynb'
 nbf.write(nb,target)

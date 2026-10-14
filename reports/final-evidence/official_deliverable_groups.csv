@@ -1,0 +1,9 @@
+Brief deliverable,Requirement,State,Evidence
+1,One sectioned run-all notebook,Local Run All passes; final Kaggle run pending,notebooks/milestone1.ipynb
+2,EDA with figures,Local evidence verified,26 matched analysis figures; report pages
+3,Unique driver-race table and safe features,Local checks verified; historical assumptions disclosed,starter_cohort.csv; modeling_table.csv; final feature register
+4,Three-model comparison and metrics,Local evidence verified; wording ambiguity disclosed,three_model_metrics.csv; frozen choice manifest
+5,Ablation and two order experiments,Local evidence verified,feature_group_ablation.csv; preprocessing_order_results.csv
+6,"Global/local explanations, plots and interpretation",Local evidence verified; limitations disclosed,XAI sections; SHAP reconstruction; LIME fidelity
+7,Inference complete/missing examples,Local evidence verified,inference_examples.csv; 25 inference contract cases
+8,Analytical PDF report,Generated and structurally verified; visual QA before handoff,output/pdf/ACL_Milestone_1_Review_Report.pdf

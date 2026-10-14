@@ -1,0 +1,53 @@
+{
+  "scope": "All 40 plan rows and eight official deliverable groups reconciled",
+  "artifacts": {
+    "notebooks/milestone1.ipynb": {
+      "sha256": "6723194a33798ec95db00914c5128d36538f94023926c488bc18c7a85c4bb855",
+      "bytes": 1892236
+    },
+    "output/pdf/ACL_Milestone_1_Review_Report.pdf": {
+      "sha256": "ec9efffdedd6e527c172e96a8f90305b4d6ccf49c2d435fed3d540321218a449",
+      "bytes": 2410255
+    },
+    "reports/milestone1-report.md": {
+      "sha256": "4584d75c93fa83618f54737cdf2bfdcab85151796041d4bd7ad667cb4fc12218",
+      "bytes": 46685
+    },
+    "src/batch4.py": {
+      "sha256": "c3c7dba27c44a488caf25da4f59b78ff63d667270f8a252753f96e170124b1e5",
+      "bytes": 15654
+    },
+    "docs/evaluation-walkthrough.md": {
+      "sha256": "7256b43e3bd23129c6842876c52043247377c7e51d228be6776660ef583f5b65",
+      "bytes": 8641
+    }
+  },
+  "local_Run_All": true,
+  "code_cells": 37,
+  "analysis_figures": 26,
+  "PDF_pages": 29,
+  "frozen_choice_sha256": "f650c67a131721a39f46243d89dc94b2950b3d970971eb7f2a4ce79c8f4a37d3",
+  "test_accuracy_goal_met": true,
+  "external_verification": {
+    "checked_on": "2026-10-14",
+    "Kaggle_upload_and_Run_All_authorized_by_user": true,
+    "Kaggle_upload_completed": false,
+    "Kaggle_Run_All_verified": false,
+    "Kaggle_blocker": "Chrome upload still reports Allow access to file URLs disabled after the user reported enabling it and the upload was retried. Existing private version 5 backup preserved; Import notebook dialog left available for manual file selection.",
+    "official_form_inspection_authorized_by_user": true,
+    "official_form_inspected": false,
+    "official_form_blocker": "Saved browser permission blocks forms.gle even after explicit user authorization. No alternate route or bypass attempted.",
+    "PDF_visual_QA": "All 29 pages inspected in rendered montages; final sensitivity tables additionally inspected at page size. No clipping or overlap observed.",
+    "all_member_access_and_review_verified": false,
+    "actual_four_member_mock_evaluation_verified": false,
+    "separate_official_evaluation_date_or_slot_confirmed": false,
+    "office_hours_announcement": "Official October 7 CSEN903 notice inspected in academic Gmail. Booking rules concern office hours, not the submission deadline or final evaluation schedule.",
+    "official_submission_made": false,
+    "submission_confirmation_saved": false
+  },
+  "team_mock_evaluation_verified": false,
+  "all_member_review_verified": false,
+  "official_submission_confirmed": false,
+  "Done_cells_changed": 0,
+  "deadline": "2026-10-18 23:59 Africa/Cairo; supplied brief, unchanged"
+}

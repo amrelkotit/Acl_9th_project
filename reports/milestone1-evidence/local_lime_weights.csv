@@ -6,6 +6,6 @@ driver_form_finish_last5 <= 7.80,0.05169772978317445
 driver_standings_rank_before <= 6.00,0.04247181057015517
 constructor_form_podium_last5 > 0.20,0.04100129040113966
 constructor_standings_rank_before <= 3.00,0.03473238988098306
-q1_gap_to_best <= 0.63,0.02648439914168477
+q1_gap_to_best <= 0.63,0.026484399141684777
 9.00 < driver_standings_points_before <= 39.00,-0.009602314274660828
 circuitId=70,0.009358396267022699

@@ -2,7 +2,7 @@
 
 
 
-**Status:** integrated implementation of work packages 1-20; team review, Kaggle verification and official submission remain pending.
+**Status:** local implementation and acceptance evidence for all 40 plan rows; team walkthrough/review, Kaggle verification and official submission remain pending.
 
 
 
@@ -401,7 +401,7 @@ The initial TreeSHAP decomposition failed the external probability-additivity ch
 
 Global SHAP: mean absolute probability contribution on the stated validation sample, not a population-wide causal effect.
 
-For one complete validation record, predicted podium probability is 0.7734, compared with SHAP baseline 0.1184. Largest positive contributions: grid_position (+0.1976), qualifying_position (+0.1569), constructor_form_podium_last5 (+0.0537). Most negative contributions: driver_standings_points_before (-0.0093), constructor_standings_points_before (-0.0006), grid_zero_flag (+0.0000). Maximum additivity error across the explained records is 7.77e-16.
+For one complete validation record, predicted podium probability is 0.7734, compared with SHAP baseline 0.1184. Largest positive contributions: grid_position (+0.1976), qualifying_position (+0.1569), constructor_form_podium_last5 (+0.0537). Most negative contributions: driver_standings_points_before (-0.0093), constructor_standings_points_before (-0.0006), grid_zero_flag (+0.0000). Maximum additivity error across the explained records is 6.66e-16.
 
 ![Local SHAP probability decomposition for the stated record; contributions plus baseline reconstruct the model probability.](milestone1-evidence/figures/15_local_shap.png)
 
@@ -500,3 +500,80 @@ Training feature-evidence panel 4; candidate rationale and missingness are docum
 - [SHAP TreeExplainer](https://shap.readthedocs.io/en/latest/generated/shap.TreeExplainer.html) and [SHAP PermutationExplainer](https://shap.readthedocs.io/en/latest/generated/shap.PermutationExplainer.html).
 
 - [LIME tabular explanation documentation](https://lime-ml.readthedocs.io/en/latest/lime.html).
+
+
+## Final acceptance addendum
+
+This addendum reconciles the final checks without changing any model, threshold or feature choice after test evaluation. The final feature register and test-evaluated contract are in the batch-3 evidence; initial registers/contracts remain historical checkpoints.
+
+### User accuracy goal and majority baseline
+
+The user requested at least 80% ordinary binary accuracy. All three frozen models meet that target on historical 2022-2024 test data. This is not a required score in the milestone brief and does not guarantee future-race accuracy. The always-no-podium baseline also exceeds 80%, so podium precision/recall/F1 and ranking metrics remain essential.
+
+| model | accuracy_percent | majority_baseline_percent | accuracy_lift_percentage_points | precision | recall | F1 |
+| --- | --- | --- | --- | --- | --- | --- |
+| Logistic regression | 88.6263 | 84.9335 | 3.6928 | 0.5947 | 0.7696 | 0.6709 |
+| Random forest | 90.1034 | 84.9335 | 5.1699 | 0.6944 | 0.6127 | 0.6510 |
+| Shallow neural network | 89.2910 | 84.9335 | 4.3575 | 0.6468 | 0.6373 | 0.6420 |
+
+The validation-selected random forest scores 90.10% accuracy, 5.17 percentage points above the 84.93% no-podium baseline. Its podium precision is 69.44% and recall 61.27%; a high overall accuracy does not mean 90% of actual podiums are recovered.
+
+### Historical cohort and duplicate sensitivity
+
+A second deterministic rule keeps the smallest resultId without prioritizing positive grid. Across 82 duplicate driver-race groups, it changes 0 retained source rows and 0 podium labels. Changed rows in the 2003-2024 modeling window: 0. Neither rule uses the target to select a row. This sensitivity does not identify historical starting-car ground truth; unresolved cases remain disclosed.
+
+Question 1 was independently recounted from actual grid 1/2, using the documented circuit/era grain, and matches all saved counts/rates. Qualifying is not substituted for actual grid. Indianapolis 500 events remain excluded; later road-course US Grands Prix remain eligible. Existing front-row figures and complete circuit rankings provide the visual evidence.
+
+### Home-race sensitivity to grid control and era
+
+The following descriptive sensitivity compares broad grid strata with exact recorded grid positions using common pooled weights and only strata represented by both home and away starts. It also separates pre-2014 and hybrid-era outcomes. The primary broad-stratum result is independently reproduced. Coverage of common support is reported because exact matching can exclude unsupported grid positions.
+
+| era | control | eligible_rows | common_support_rows | common_strata | away_rate | home_rate | home_minus_away_percentage_points |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1950–2024 | coarse_grid_strata | 24555 | 24555 | 5 | 0.1366 | 0.1321 | -0.4518 |
+| 1950–2024 | exact_grid_position | 24555 | 24553 | 32 | 0.1366 | 0.1321 | -0.4473 |
+| 1950–2013 | coarse_grid_strata | 20017 | 20017 | 5 | 0.1334 | 0.1283 | -0.5163 |
+| 1950–2013 | exact_grid_position | 20017 | 20015 | 32 | 0.1334 | 0.1286 | -0.4812 |
+| 2014–2024 | coarse_grid_strata | 4538 | 4538 | 5 | 0.1511 | 0.1454 | -0.5665 |
+| 2014–2024 | exact_grid_position | 4538 | 4504 | 21 | 0.1520 | 0.1711 | 1.9095 |
+
+A change in the home-away difference across matching definitions or eras is evidence of sensitivity, not a causal home advantage. Exact grid control still leaves driver, team, circuit, season and selection confounding. Nationality mappings, positive-grid restriction and ambiguous dual-nationality exclusions remain unchanged.
+
+### Mechanical-status uncertainty
+
+Question 3 was independently recounted for every constructor/period and matches the saved mechanical and ambiguous counts. Finished/lapped finishers, crashes, driver causes, regulatory decisions and documented non-starts are not counted as proven mechanical failures. The table shows each period’s five highest strict-rate constructors and a deliberately extreme scenario where every ambiguous status is counted as mechanical. This scenario is not an estimated true rate or confidence interval.
+
+| constructor_name | period | starts | mechanical_retirements | ambiguous_statuses | mechanical_rate | all_ambiguous_counted_rate |
+| --- | --- | --- | --- | --- | --- | --- |
+| Caterham | 2014–2021 | 34 | 8 | 3 | 0.2353 | 0.3235 |
+| Lotus F1 | 2014–2021 | 75 | 13 | 5 | 0.1733 | 0.2400 |
+| Toro Rosso | 2014–2021 | 242 | 39 | 5 | 0.1612 | 0.1818 |
+| Renault | 2014–2021 | 200 | 27 | 6 | 0.1350 | 0.1650 |
+| McLaren | 2014–2021 | 319 | 43 | 8 | 0.1348 | 0.1599 |
+| Alfa Romeo | 2022–2024 | 88 | 10 | 1 | 0.1136 | 0.1250 |
+| Alpine F1 Team | 2022–2024 | 136 | 15 | 0 | 0.1103 | 0.1103 |
+| AlphaTauri | 2022–2024 | 88 | 6 | 1 | 0.0682 | 0.0795 |
+| Williams | 2022–2024 | 134 | 7 | 4 | 0.0522 | 0.0821 |
+| Ferrari | 2022–2024 | 135 | 7 | 3 | 0.0519 | 0.0741 |
+
+### Qualifying coverage and constructor history
+
+| period | driver_race_rows | qualifying_observed_rows | qualifying_coverage |
+| --- | --- | --- | --- |
+| 1950–1995 | 13584 | 803 | 0.0591 |
+| 1996–2002 | 2496 | 735 | 0.2945 |
+| training 2003–2019 | 6799 | 6778 | 0.9969 |
+| validation 2020–2021 | 778 | 777 | 0.9987 |
+| test 2022–2024 | 1354 | 1354 | 1.0000 |
+
+Training-only qualifying coverage supports the predeclared 2003 model-window start; older races remain descriptive/history inputs. Later-session Q2/Q3 absence can indicate non-advancement and is not treated as an observed zero time. The existing coverage and feature figures show the drift. Validation/test coverage above is descriptive after choices were fixed.
+
+The cohort contains 1398 observed driver constructor-change events and 197 constructor identities. Constructor form follows constructorId, while driver form follows driverId; a driver moving teams receives the destination constructor’s prior history. New constructorIds reset team history rather than silently merging renamed organizations. Source-event checks confirm all form/standings histories are strictly earlier than the predicted event.
+
+### Evaluation preparation and external completion
+
+The repository provides an evidence-based walkthrough and question set for every member. A mock evaluation has not been held or passed merely because the guide exists. The course brief says evaluation dates and slot reservations are announced separately. A reviewed official October 7 office-hours announcement concerns one 15-minute office-hours slot per team, reserved by 11:59 PM the preceding day; this is not the milestone submission deadline or a confirmed evaluation date.
+
+All six plan metrics plus separately defined AP, and both local SHAP/LIME, cover the named metric/XAI outputs while preserving the brief’s wording ambiguity. No official clarification is invented. Local runtime versions and a tested dependency list are recorded. Final Kaggle restart/Run All, four-member access and review, accepted-work synchronization, and official submission/confirmation remain external requirements. No Done cells or member contribution approvals are inferred from code execution.
+
+The final compliance matrix links all 40 plan rows and the eight official deliverable groups to notebook/report evidence. Plan rows are team work packages/checks, not the brief’s numbering. The submission deadline remains 18 October 2026 at 11:59 PM.

@@ -48,7 +48,7 @@ WIDTH = A4[0]-90
 story = [Paragraph('FORMULA 1<br/>PODIUM PREDICTION',styles['Title']),Spacer(1,18),
     Paragraph('CSEN 903 - Advanced Computer Lab',styles['Heading1']),
     Paragraph('Milestone 1 | Integrated analytical report',styles['Heading2']),Spacer(1,20),
-    Paragraph('Review draft - work packages 1-20 implemented',styles['BodyAcademic']),
+    Paragraph('Complete local review package - plan rows 1-40 addressed',styles['BodyAcademic']),
     Paragraph('Prepared 14 October 2026. Submission deadline: 18 October 2026, 11:59 PM.',styles['BodyAcademic']),
     Paragraph('Includes audit, cleaning, historical questions, leakage-safe features, three-model comparison, controlled experiments, explanations, and inference demonstrations.',styles['BodyAcademic']),
     Paragraph('<b>Pending:</b> all-member review/access verification, Kaggle synchronization and runtime verification, historical source ambiguities, and official submission.',styles['BodyAcademic']),
@@ -64,7 +64,7 @@ while i<len(lines):
         i+=1; continue
     if line.startswith('## '):
         title = line[3:]
-        if title in ['Three-model training, selection and comparison','Controlled experiments','Inference function and missing-data handling']:
+        if title in ['Three-model training, selection and comparison','Controlled experiments','Inference function and missing-data handling','Final acceptance addendum']:
             story.append(PageBreak())
         story.append(Paragraph(text_markup(title),styles['Heading1']))
         i+=1; continue

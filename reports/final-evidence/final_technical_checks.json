@@ -1,0 +1,23 @@
+{
+  "Q1_recount_matches": true,
+  "Q2_standardized_recount_matches": true,
+  "Q3_count_recount_matches": true,
+  "strictly_earlier_feature_lineage": true,
+  "duplicate_sensitivity": {
+    "duplicate_driver_race_groups": 82,
+    "alternate_rule": "Smallest resultId only; no target-based selection",
+    "changed_source_rows": 0,
+    "changed_podium_labels": 0,
+    "changed_rows_in_2003_2024_model_window": 0,
+    "limitation": "Sensitivity is not independent ground-truth reconstruction of the historical starting car."
+  },
+  "driver_constructor_change_events": 1398,
+  "constructors_in_history": 197,
+  "home_sensitivity_rows": 6,
+  "sprint_predictors_used": false,
+  "model_choices_changed": false,
+  "historical_ground_truth_fully_resolved": false,
+  "evaluation_walkthrough_held": false,
+  "Kaggle_Run_All_verified": false,
+  "submission_confirmed": false
+}

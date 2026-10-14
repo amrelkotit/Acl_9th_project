@@ -1,0 +1,17 @@
+{
+  "checked_on": "2026-10-14",
+  "Kaggle_upload_and_Run_All_authorized_by_user": true,
+  "Kaggle_upload_completed": false,
+  "Kaggle_Run_All_verified": false,
+  "Kaggle_blocker": "Chrome upload still reports Allow access to file URLs disabled after the user reported enabling it and the upload was retried. Existing private version 5 backup preserved; Import notebook dialog left available for manual file selection.",
+  "official_form_inspection_authorized_by_user": true,
+  "official_form_inspected": false,
+  "official_form_blocker": "Saved browser permission blocks forms.gle even after explicit user authorization. No alternate route or bypass attempted.",
+  "PDF_visual_QA": "All 29 pages inspected in rendered montages; final sensitivity tables additionally inspected at page size. No clipping or overlap observed.",
+  "all_member_access_and_review_verified": false,
+  "actual_four_member_mock_evaluation_verified": false,
+  "separate_official_evaluation_date_or_slot_confirmed": false,
+  "office_hours_announcement": "Official October 7 CSEN903 notice inspected in academic Gmail. Booking rules concern office hours, not the submission deadline or final evaluation schedule.",
+  "official_submission_made": false,
+  "submission_confirmation_saved": false
+}
