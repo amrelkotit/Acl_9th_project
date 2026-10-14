@@ -1,0 +1,13 @@
+{
+  "unmapped_driver_rows": 3,
+  "mapped_rows_without_positive_grid": 72,
+  "eligible_rows": 24555,
+  "strata_with_common_support": [
+    "1\u20132",
+    "3\u20135",
+    "6\u201310",
+    "11\u201315",
+    "16+"
+  ],
+  "limitation": "Grid strata retain within-bin differences; driver, constructor, circuit and era confounding remain. Not a causal effect. Dual nationalities excluded rather than guessed."
+}

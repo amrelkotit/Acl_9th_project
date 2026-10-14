@@ -1,0 +1,107 @@
+{
+  "raceId": 1032,
+  "driverId": 1,
+  "complete_record": {
+    "grid_position": 1.0,
+    "grid_zero_flag": 0.0,
+    "qualifying_position": 1.0,
+    "q1_gap_to_best": 0.0,
+    "driver_form_podium_last5": 0.6,
+    "driver_form_finish_last5": 3.0,
+    "constructor_form_podium_last5": 0.6,
+    "driver_standings_points_before": 12.0,
+    "driver_standings_rank_before": 4.0,
+    "constructor_standings_points_before": 37.0,
+    "constructor_standings_rank_before": 1.0,
+    "round": 2.0,
+    "constructorId": "131",
+    "circuitId": "70"
+  },
+  "partial_record": {
+    "grid_position": 1.0,
+    "grid_zero_flag": 0.0,
+    "driver_form_podium_last5": 0.6,
+    "driver_form_finish_last5": 3.0,
+    "constructor_form_podium_last5": 0.6,
+    "driver_standings_points_before": 12.0,
+    "constructor_standings_points_before": 37.0,
+    "constructor_standings_rank_before": 1.0,
+    "round": 2.0,
+    "constructorId": "131",
+    "circuitId": "70"
+  },
+  "predictions": [
+    {
+      "record_kind": "complete",
+      "model": "Logistic regression",
+      "podium_probability": 0.7347713283039875,
+      "threshold": 0.32999999999999996,
+      "predicted_podium": 1,
+      "missing_features": [],
+      "input_contract": "engineered pre-race features; caller must assemble history before cutoff",
+      "probability_note": "Model score; probability calibration is not established."
+    },
+    {
+      "record_kind": "partially_missing",
+      "model": "Logistic regression",
+      "podium_probability": 0.11687647583428316,
+      "threshold": 0.32999999999999996,
+      "predicted_podium": 0,
+      "missing_features": [
+        "qualifying_position",
+        "q1_gap_to_best",
+        "driver_standings_rank_before"
+      ],
+      "input_contract": "engineered pre-race features; caller must assemble history before cutoff",
+      "probability_note": "Model score; probability calibration is not established."
+    },
+    {
+      "record_kind": "complete",
+      "model": "Random forest",
+      "podium_probability": 0.7734225070079116,
+      "threshold": 0.48999999999999994,
+      "predicted_podium": 1,
+      "missing_features": [],
+      "input_contract": "engineered pre-race features; caller must assemble history before cutoff",
+      "probability_note": "Model score; probability calibration is not established."
+    },
+    {
+      "record_kind": "partially_missing",
+      "model": "Random forest",
+      "podium_probability": 0.4825097186901537,
+      "threshold": 0.48999999999999994,
+      "predicted_podium": 0,
+      "missing_features": [
+        "qualifying_position",
+        "q1_gap_to_best",
+        "driver_standings_rank_before"
+      ],
+      "input_contract": "engineered pre-race features; caller must assemble history before cutoff",
+      "probability_note": "Model score; probability calibration is not established."
+    },
+    {
+      "record_kind": "complete",
+      "model": "Shallow neural network",
+      "podium_probability": 0.7861646483160112,
+      "threshold": 0.48999999999999994,
+      "predicted_podium": 1,
+      "missing_features": [],
+      "input_contract": "engineered pre-race features; caller must assemble history before cutoff",
+      "probability_note": "Model score; probability calibration is not established."
+    },
+    {
+      "record_kind": "partially_missing",
+      "model": "Shallow neural network",
+      "podium_probability": 0.5901565049059146,
+      "threshold": 0.48999999999999994,
+      "predicted_podium": 1,
+      "missing_features": [
+        "qualifying_position",
+        "q1_gap_to_best",
+        "driver_standings_rank_before"
+      ],
+      "input_contract": "engineered pre-race features; caller must assemble history before cutoff",
+      "probability_note": "Model score; probability calibration is not established."
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+split,rows,races,start_year,end_year
+test_reserved,1354,68,2022,2024
+train,6799,321,2003,2019
+validation,778,39,2020,2021

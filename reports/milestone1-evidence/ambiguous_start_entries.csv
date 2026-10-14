@@ -1,0 +1,39 @@
+resultId,raceId,driverId,constructorId,number,grid,position,positionText,positionOrder,points,laps,time,milliseconds,fastestLap,rank,fastestLapTime,fastestLapSpeed,statusId,time_seconds,fastestLapTime_seconds,year,round,date,name,circuitId,event_idx,status_text,cohort_exclusion
+4314,220,58,18,21,0,,E,22,0.0,0,,,,,,,92,,,1997,14,1997-09-21,Austrian Grand Prix,70,610,Underweight,ambiguous_zero_grid_zero_laps
+5114,255,88,27,25,0,,W,24,0.0,0,,,,,,,3,,,1995,16,1995-10-29,Japanese Grand Prix,22,579,Accident,ambiguous_zero_grid_zero_laps
+5220,259,107,31,32,0,,W,26,0.0,0,,,,,,,3,,,1994,3,1994-05-01,San Marino Grand Prix,21,550,Accident,ambiguous_zero_grid_zero_laps
+7038,321,112,27,26,0,,D,27,0.0,0,,,,,,,2,,,1990,1,1990-03-11,United States Grand Prix,33,484,Disqualified,ambiguous_zero_grid_zero_laps
+7108,323,94,18,23,0,,W,27,0.0,0,,,,,,,3,,,1990,3,1990-05-13,San Marino Grand Prix,21,486,Accident,ambiguous_zero_grid_zero_laps
+7213,326,90,44,33,0,,D,27,0.0,0,,,,,,,2,,,1990,6,1990-06-24,Mexican Grand Prix,32,489,Disqualified,ambiguous_zero_grid_zero_laps
+8213,364,161,48,39,0,,D,30,0.0,0,,,,,,,2,,,1989,9,1989-07-30,German Grand Prix,10,476,Disqualified,ambiguous_zero_grid_zero_laps
+8326,367,131,34,8,0,,D,27,0.0,0,,,,,,,2,,,1989,12,1989-09-10,Italian Grand Prix,14,479,Disqualified,ambiguous_zero_grid_zero_laps
+9038,389,163,27,25,0,,W,27,0.0,0,,,,,,,22,,,1987,2,1987-05-03,San Marino Grand Prix,21,437,Suspension,ambiguous_zero_grid_zero_laps
+9380,402,95,3,5,0,,W,27,0.0,0,,,,,,,3,,,1987,15,1987-11-01,Japanese Grand Prix,22,450,Accident,ambiguous_zero_grid_zero_laps
+10252,436,181,54,14,0,,D,27,0.0,0,,,,,,,2,,,1984,1,1984-03-25,Brazilian Grand Prix,36,388,Disqualified,ambiguous_zero_grid_zero_laps
+10547,447,185,25,4,0,,D,26,0.0,0,,,,,,,2,,,1984,12,1984-08-19,Austrian Grand Prix,70,399,Disqualified,ambiguous_zero_grid_zero_laps
+11214,471,203,6,27,0,,W,28,0.0,0,,,,,,,3,,,1982,5,1982-05-09,Belgian Grand Prix,40,361,Accident,ambiguous_zero_grid_zero_laps
+11659,486,136,54,9,0,,R,27,0.0,0,,,,,,,31,,,1981,4,1981-05-03,San Marino Grand Prix,21,345,Retired,ambiguous_zero_grid_zero_laps
+12074,500,117,1,8,0,,W,25,0.0,0,,,,,,,3,,,1980,3,1980-03-01,South African Grand Prix,30,330,Accident,ambiguous_zero_grid_zero_laps
+12075,500,176,54,9,0,,W,26,0.0,0,,,,,,,3,,,1980,3,1980-03-01,South African Grand Prix,30,330,Accident,ambiguous_zero_grid_zero_laps
+12887,530,211,63,18,0,,W,23,0.0,0,,,,,,,3,,,1978,4,1978-04-02,United States Grand Prix West,43,300,Accident,ambiguous_zero_grid_zero_laps
+12888,530,233,58,16,0,,W,24,0.0,0,,,,,,,3,,,1978,4,1978-04-02,United States Grand Prix West,43,300,Accident,ambiguous_zero_grid_zero_laps
+14106,573,229,64,24,0,,W,25,0.0,0,,,,,,,3,,,1976,14,1976-10-03,Canadian Grand Prix,48,277,Accident,ambiguous_zero_grid_zero_laps
+14107,573,278,59,21,0,,W,26,0.0,0,,,,,,,3,,,1976,14,1976-10-03,Canadian Grand Prix,48,277,Accident,ambiguous_zero_grid_zero_laps
+15263,617,231,37,27,0,,W,25,0.0,0,,,,,,,3,,,1973,13,1973-09-09,Italian Grand Prix,14,232,Accident,ambiguous_zero_grid_zero_laps
+15317,619,327,25,6,0,,W,28,0.0,0,,,,,,,3,,,1973,15,1973-10-07,United States Grand Prix,46,234,Accident,ambiguous_zero_grid_zero_laps
+16133,652,358,32,22,0,,W,23,0.0,0,,,,,,,104,,,1970,10,1970-09-06,Italian Grand Prix,14,193,Fatal accident,ambiguous_zero_grid_zero_laps
+16571,676,235,6,10,0,,W,21,0.0,0,,,,,,,3,,,1968,10,1968-09-22,Canadian Grand Prix,52,170,Accident,ambiguous_zero_grid_zero_laps
+16850,691,397,176,11,0,,W,17,0.0,0,,,,,,,5,,,1966,2,1966-06-12,Belgian Grand Prix,13,142,Engine,ambiguous_zero_grid_zero_laps
+17229,710,408,66,30,0,,W,18,0.0,0,,,,,,,3,,,1964,2,1964-05-24,Dutch Grand Prix,39,122,Accident,ambiguous_zero_grid_zero_laps
+18265,754,547,105,14,0,,W,17,0.0,0,,,,,,,69,,,1960,9,1960-09-04,Italian Grand Prix,14,92,Fuel system,ambiguous_zero_grid_zero_laps
+18661,772,526,105,14,0,,W,26,0.0,0,,,,,,,5,,,1958,8,1958-08-03,German Grand Prix,20,71,Engine,ambiguous_zero_grid_zero_laps
+18911,785,578,66,10,0,,W,16,0.0,0,,,,,,,5,,,1956,2,1956-05-13,Monaco Grand Prix,6,49,Engine,ambiguous_zero_grid_zero_laps
+18912,785,479,66,12,0,,W,17,0.0,0,,,,,,,5,,,1956,2,1956-05-13,Monaco Grand Prix,6,49,Engine,ambiguous_zero_grid_zero_laps
+18913,785,589,105,34,0,,W,18,0.0,0,,,,,,,5,,,1956,2,1956-05-13,Monaco Grand Prix,6,49,Engine,ambiguous_zero_grid_zero_laps
+19372,805,626,6,24,0,,W,17,0.0,0,,,,,,,3,,,1954,7,1954-08-22,Swiss Grand Prix,66,38,Accident,ambiguous_zero_grid_zero_laps
+19415,807,581,118,42,0,,W,22,0.0,0,,,,,,,3,,,1954,9,1954-10-24,Spanish Grand Prix,67,40,Accident,ambiguous_zero_grid_zero_laps
+20320,728,310,176,15,0,,W,21,0.0,0,,,,,,,3,,,1963,10,1963-12-28,South African Grand Prix,56,120,Accident,ambiguous_zero_grid_zero_laps
+22575,927,829,209,28,0,,W,20,0.0,0,,,,0,,,69,,,2015,2,2015-03-29,Malaysian Grand Prix,2,917,Fuel system,ambiguous_zero_grid_zero_laps
+23681,983,8,6,7,0,,R,20,0.0,0,,,,0,,,84,,,2017,15,2017-10-01,Malaysian Grand Prix,2,970,Battery,ambiguous_zero_grid_zero_laps
+25245,1065,852,213,22,0,,W,20,0.0,0,,,,0,,,23,,,2021,14,2021-09-12,Italian Grand Prix,14,1048,Brakes,ambiguous_zero_grid_zero_laps
+26245,1118,844,6,16,0,,W,20,0.0,0,,,,0,,,5,,,2023,20,2023-11-05,São Paulo Grand Prix,18,1098,Engine,ambiguous_zero_grid_zero_laps

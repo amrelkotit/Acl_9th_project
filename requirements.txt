@@ -5,3 +5,6 @@ matplotlib>=3.9,<4
 nbformat>=5.10,<6
 nbclient>=0.10,<1
 ipykernel>=6.29,<8
+shap>=0.47,<0.54
+lime==0.2.0.1
+reportlab>=4,<5

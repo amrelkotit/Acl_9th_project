@@ -1,0 +1,15 @@
+{
+  "same_rows_features_three_models": true,
+  "unique_driver_race_keys": true,
+  "six_feature_groups_ablated": true,
+  "two_order_experiments_two_variants_each": true,
+  "three_models_all_six_metrics_all_three_splits": true,
+  "model_choices_locked_before_test": true,
+  "global_SHAP_permutation_local_SHAP_LIME": true,
+  "complete_and_missing_inference": true,
+  "Kaggle_execution_verified": false,
+  "all_team_members_reviewed": false,
+  "official_submission_completed": false,
+  "historical_cohort_ground_truth_fully_resolved": false,
+  "notes": "Implemented checks pass. Kaggle synchronization remains blocked by the prior upload denial; team access/review and historical source ambiguities require verification. No perfect-score guarantee."
+}

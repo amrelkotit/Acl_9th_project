@@ -1,0 +1,15 @@
+{
+  "explained_model": "Random forest",
+  "SHAP_method": "Permutation SHAP, two permutation cycles per row; 32 training background rows; fallback after TreeSHAP failed the external probability-additivity check",
+  "validation_sample_rows": 48,
+  "initial_TreeSHAP_max_additivity_error": 0.003532331643025244,
+  "background_source": "training rows only",
+  "SHAP_max_additivity_error": 7.771561172376096e-16,
+  "local_predicted_probability": 0.7734225070079116,
+  "local_SHAP_baseline_probability": 0.1183807601118739,
+  "local_LIME_surrogate_R2": 0.680571943700498,
+  "local_LIME_surrogate_probability": 0.4793199485571794,
+  "permutation_top_feature": "grid_position",
+  "SHAP_top_feature": "grid_position",
+  "limitation": "Explanations describe model reliance, not causal effects. Correlated features and artificial perturbations can distort attribution. SHAP is sample/background dependent; LIME is a local approximation, not an additive probability decomposition."
+}

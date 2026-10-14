@@ -1,0 +1,68 @@
+{
+  "features": [
+    "grid_position",
+    "grid_zero_flag",
+    "qualifying_position",
+    "q1_gap_to_best",
+    "driver_form_podium_last5",
+    "driver_form_finish_last5",
+    "constructor_form_podium_last5",
+    "driver_standings_points_before",
+    "driver_standings_rank_before",
+    "constructor_standings_points_before",
+    "constructor_standings_rank_before",
+    "round",
+    "constructorId",
+    "circuitId"
+  ],
+  "primary_selection_metric": "validation average precision",
+  "chosen_model_for_inference": "Random forest",
+  "models": {
+    "Logistic regression": {
+      "parameters": {
+        "C": 1.0
+      },
+      "threshold": 0.32999999999999996,
+      "fitted_pipeline_hash": "b4bd540c992c960a483de68d205ce2b3"
+    },
+    "Random forest": {
+      "parameters": {
+        "max_depth": 12,
+        "min_samples_leaf": 3,
+        "n_estimators": 250
+      },
+      "threshold": 0.48999999999999994,
+      "fitted_pipeline_hash": "f5ef142b42ffd34b57e5636bef7a10e4"
+    },
+    "Shallow neural network": {
+      "parameters": {
+        "hidden_layer_sizes": [
+          32,
+          16
+        ],
+        "alpha": 0.01,
+        "solver": "adam",
+        "learning_rate_init": 0.001,
+        "selected_epoch": 20,
+        "max_checked_epoch": 150,
+        "checkpoint_selection": "highest validation AP; earliest checkpoint on ties"
+      },
+      "threshold": 0.48999999999999994,
+      "fitted_pipeline_hash": "29ac34c844d19f86dbcf100a063f4de6"
+    }
+  },
+  "row_hashes": {
+    "train": "d33ccc0313f0a8d10c1c2db9a8ea4e1005bc0348ac06b391b802008786ef2c18",
+    "validation": "9964a1b0e9bd6b52d7c37e72ed56d140a0e8472e19f9bd512b0f5201ed3b1b1d",
+    "test_reserved": "9d009d597e77245ab267421b80589877525c4dcb271deb480f4fd30fc3403580"
+  },
+  "decision": "Keep the complete predeclared feature set and baseline preprocessing for the main three-model comparison. Ablation/order experiments are diagnostic; no test-driven adoption.",
+  "versions": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.1",
+    "sklearn": "1.9.1"
+  },
+  "seed": 42,
+  "choice_sha256": "f650c67a131721a39f46243d89dc94b2950b3d970971eb7f2a4ce79c8f4a37d3",
+  "frozen_before_test_predictions": true
+}

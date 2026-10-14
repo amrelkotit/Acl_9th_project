@@ -6,6 +6,7 @@ sys.path.insert(0,str(Path(__file__).parent/'.deps'))
 import nbformat as nbf
 
 root = Path(__file__).parent
+batch2_enabled = '--batch2' in sys.argv
 source = (root/'src'/'batch1.py').read_text(encoding='utf-8')
 report_source = (root/'src'/'batch1_report.py').read_text(encoding='utf-8')
 lines = source.splitlines(keepends=True)
@@ -78,7 +79,49 @@ stage('Batch 1 interpretation and report section',
  'The following report is generated from this run’s evidence. It is a draft for the first batch, not a completed submission.',
  ['verify_raw_unchanged'],
  report_source+'\n\nREPORT_PATH = OUT/"batch1_report.md"\nreport_text = write_batch1_report(OUT, REPORT_PATH)\nverify_raw_unchanged(DATA_DIR, raw_hashes)\n# Figures have already been displayed in their matching notebook sections.\nimport re\ndisplay(Markdown(re.sub(r"!\\[[^]]*\\]\\([^)]*\\)", "[Figure shown in the matching notebook section above]", report_text)))')
-cells.append(nbf.v4.new_markdown_cell('''## Remaining batches
+if batch2_enabled:
+    cells[0].source = cells[0].source.replace('## Batch 1: work packages 1–10','## Integrated implementation: work packages 1–20').replace(
+        'It is a first-batch draft,\nnot the final milestone. NN, experiments, XAI, inference, final test evaluation, and final\nPDF remain.',
+        'The later sections add the shallow NN, controlled experiments, XAI/inference, and a frozen three-model test evaluation. Team review, Kaggle synchronization and official submission remain pending.')
+    cells[1].source = cells[1].source.replace('/kaggle/working/acl_m1_batch1','/kaggle/working/acl_m1').replace("PROJECT_ROOT/'outputs'/'batch1'","PROJECT_ROOT/'outputs'/'batch2'")
+    source2 = (root/'src'/'batch2.py').read_text(encoding='utf-8')
+    lines2 = source2.splitlines(keepends=True)
+    tree2 = ast.parse(source2)
+    nodes2 = {node.name:''.join(lines2[node.lineno-1:node.end_lineno]) for node in tree2.body if isinstance(node,(ast.FunctionDef,ast.ClassDef))}
+    first2 = min(node.lineno for node in tree2.body if isinstance(node,(ast.FunctionDef,ast.ClassDef)))
+    header2 = ''.join(lines2[:first2-1])
+    cells.append(nbf.v4.new_markdown_cell('## Batch 2: work packages 11–20\n\nThe preceding batch-1 report is a checkpoint. The integrated report at the end supersedes its pending-work statements. All experiments below use training/validation only until the explicit model-choice freeze.'))
+    cells.append(nbf.v4.new_code_cell(header2+'\n'+nodes2['QuantileClipper']))
+    def stage2(title,explanation,names,call):
+        cells.append(nbf.v4.new_markdown_cell('## '+title+'\n\n'+explanation))
+        cells.append(nbf.v4.new_code_cell('\n\n'.join(nodes2[n] for n in names)))
+        cells.append(nbf.v4.new_code_cell(call))
+    stage2('11. Shallow feed-forward neural network',
+        'Compare one hidden layer (32 units) and two (32, 16). Train using the same encoded features and training rows as both statistical models. Adam updates use training rows only; explicit 2020–2021 validation AP selects architecture/checkpoint, then validation F1 selects the threshold. Record the full learning history and limitations.',
+        ['choose_threshold','train_shallow_network'],
+        'all_models, three_model_validation, nn_trials = train_shallow_network(model, numeric_features, categorical_features, statistical_models, OUT)\ndisplay(nn_trials)')
+    stage2('12. Feature-group ablation and two preprocessing-order experiments',
+        'Retrain a fixed random forest after removing each of the six feature groups separately. Keep rows, RF settings and decision threshold fixed. Experiment 1 compares imputation/scaling orders; experiment 2 compares clipping/scaling orders after imputation. Both order variants use a fixed logistic-regression model and omit numeric missing indicators to isolate the comparison at equal dimension. Bounds/statistics are learned on training only.',
+        ['feature_group_ablation','preprocessing_order_experiments','feature_detail_plots'],
+        'ablation_results = feature_group_ablation(model, numeric_features, categorical_features, feature_register, all_models, OUT)\norder_results, distribution_effects = preprocessing_order_experiments(model, numeric_features, categorical_features, all_models, OUT)\nfeature_detail_names = feature_detail_plots(model, numeric_features, categorical_features, OUT)')
+    stage2('13a. Inference on complete and partially missing pre-race records',
+        'The callable consumes engineered pre-race features, uses the fitted pipeline without refitting, handles missing fields, and rejects unknown/outcome columns. Demonstrate both records for every model and verify fitted-model hashes remain unchanged. Scores are not asserted to be calibrated probabilities.',
+        ['podium_inference','inference_demonstration'],
+        'inference_examples, complete_pre_race_record = inference_demonstration(model, numeric_features, categorical_features, all_models, OUT)\ndisplay(inference_examples)')
+    stage2('13b. Global and local explanations of the validation-selected model',
+        'Choose the model by validation AP. Compute raw-feature permutation importance, global SHAP on 48 validation records with training-only background, and local SHAP plus LIME for one complete record. Check SHAP additivity to the predicted probability; record LIME local fidelity. Explain model reliance, never causal effects. Sample/background dependence and artificial perturbations are limitations.',
+        ['explain_validation_model'],
+        'xai_summary, permutation_table, shap_table, lime_table = explain_validation_model(model, numeric_features, categorical_features, all_models, OUT, complete_pre_race_record)\ndisplay(lime_table)')
+    stage2('17–20. Freeze choices, then evaluate the three locked models',
+        'After all validation-driven work above, keep the full predeclared feature set and baseline main-model preprocessing. Freeze pipeline hashes, hyperparameters, NN checkpoint and thresholds before computing any test predictions. Report all six plan metrics plus separately defined AP on train/validation/test. A changed choice after test scoring raises an error rather than silently retuning.',
+        ['freeze_model_choices','evaluate_frozen_models','acceptance_checks_batch2'],
+        'frozen_choices = freeze_model_choices(model, numeric_features, categorical_features, all_models, OUT)\nfinal_model_metrics = evaluate_frozen_models(model, numeric_features, categorical_features, all_models, frozen_choices, OUT)\nbatch2_acceptance = acceptance_checks_batch2(model, numeric_features, categorical_features, all_models, OUT)\nverify_raw_unchanged(DATA_DIR, raw_hashes)')
+    report2 = (root/'src'/'batch2_report.py').read_text(encoding='utf-8')
+    cells.append(nbf.v4.new_markdown_cell('## 14–16. Integrated analytical report and review handoff\n\nThe report incorporates both batches and all figures. Row 16 remains pending team review, successful Kaggle execution, and actual submission confirmation. The local PDF is generated from this same report after notebook execution.'))
+    cells.append(nbf.v4.new_code_cell(report2+'\n\nintegrated_report = write_integrated_report(OUT, OUT/"milestone1_report.md")\ndisplay(Markdown(re.sub(r"!\\[[^]]*\\]\\([^)]*\\)", "[Figure displayed in the matching notebook section]", integrated_report)))'))
+    cells.append(nbf.v4.new_markdown_cell('## Remaining: acceptance/enhancement rows 21–40\n\nTeam access/review, historical source ambiguities, Kaggle synchronization/runtime verification, metric/LIME wording clarification, and official submission remain pending. Test results must not guide additional model tuning. No team review or submission is claimed complete.'))
+else:
+    cells.append(nbf.v4.new_markdown_cell('''## Remaining batches
 Work packages 11–20 add the shallow NN, experiments, XAI/inference, report integration and acceptance checks.
 Rows 21–40 add the remaining acceptance/enhancement checks. Final test metrics are pending until choices are frozen.
 Setup is not fully complete until all four teammates can access the private repository and notebook.

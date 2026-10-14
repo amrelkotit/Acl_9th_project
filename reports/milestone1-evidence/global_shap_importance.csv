@@ -1,0 +1,15 @@
+feature,mean_absolute_probability_contribution
+grid_zero_flag,1.1275322522434367e-06
+circuitId,0.002524418758324111
+round,0.004214313912504518
+constructor_standings_points_before,0.005874682352438533
+driver_standings_points_before,0.008855170415357275
+constructorId,0.010835321317528604
+constructor_standings_rank_before,0.013133365144666884
+q1_gap_to_best,0.014022077236363902
+driver_form_finish_last5,0.014933039597361667
+driver_form_podium_last5,0.015526988645013937
+constructor_form_podium_last5,0.017113784224095874
+driver_standings_rank_before,0.017343150271558253
+qualifying_position,0.05017647325929924
+grid_position,0.05916797451233916
