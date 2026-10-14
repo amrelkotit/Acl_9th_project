@@ -1,0 +1,20 @@
+stage,input_rows,output_rows,row_difference
+circuits: raw -> typed working copy,77,77,0
+constructors: raw -> typed working copy,212,212,0
+constructor_results: raw -> typed working copy,12625,12625,0
+constructor_standings: raw -> typed working copy,13391,13391,0
+drivers: raw -> typed working copy,861,861,0
+driver_standings: raw -> typed working copy,34863,34863,0
+races: raw -> typed working copy,1125,1125,0
+results: raw -> typed working copy,26759,26759,0
+qualifying: raw -> typed working copy,10494,10494,0
+lap_times: raw -> typed working copy,589081,589081,0
+pit_stops: raw -> typed working copy,11371,11371,0
+sprint_results: raw -> typed working copy,360,360,0
+seasons: raw -> typed working copy,75,75,0
+status: raw -> typed working copy,139,139,0
+results -> races -> status -> circuits,26759,26759,0
+eligible cohort -> qualifying (left join),25011,25011,0
+raw results -> documented exclusions,26759,25099,-1660
+eligible entries -> deterministic deduplication,25099,25011,-88
+historical cohort -> predeclared 2003–2024 model window,25011,8931,-16080

@@ -6,7 +6,8 @@ sys.path.insert(0,str(Path(__file__).parent/'.deps'))
 import nbformat as nbf
 
 root = Path(__file__).parent
-batch2_enabled = '--batch2' in sys.argv
+batch3_enabled = '--batch3' in sys.argv
+batch2_enabled = '--batch2' in sys.argv or batch3_enabled
 source = (root/'src'/'batch1.py').read_text(encoding='utf-8')
 report_source = (root/'src'/'batch1_report.py').read_text(encoding='utf-8')
 lines = source.splitlines(keepends=True)
@@ -126,6 +127,12 @@ Work packages 11–20 add the shallow NN, experiments, XAI/inference, report int
 Rows 21–40 add the remaining acceptance/enhancement checks. Final test metrics are pending until choices are frozen.
 Setup is not fully complete until all four teammates can access the private repository and notebook.
 No task is marked Done solely because code exists; inspect the run evidence and limitations.'''))
+if batch3_enabled:
+    cells[0].source = cells[0].source.replace('work packages 1–20','work packages 1–20; acceptance rows 21–30')
+    cells[-1] = nbf.v4.new_markdown_cell('## Batch 3: acceptance and enhancement rows 21–30\n\nThe integrated PDF/report above remains the analytical review draft. The following checks add evidence and a final feature register/contract without changing any frozen model choice. The user’s 80% ordinary binary accuracy target is checked alongside the no-podium baseline and podium metrics. Kaggle execution, team access/review and official submission remain pending.')
+    cells.append(nbf.v4.new_code_cell((root/'src'/'batch3.py').read_text(encoding='utf-8')))
+    cells.append(nbf.v4.new_code_cell('accuracy_target_results, final_feature_register, inference_contract_checks, batch3_summary = run_batch3_acceptance(model, numeric_features, categorical_features, all_models, OUT, DATA_DIR)\ndisplay(accuracy_target_results.loc[accuracy_target_results.split.eq("test"), ["model","accuracy","always_no_podium_accuracy","accuracy_lift_percentage_points","precision","recall","F1","meets_user_accuracy_target"]])\ndisplay(final_feature_register)\ndisplay(inference_contract_checks)'))
+    cells.append(nbf.v4.new_markdown_cell('## Handoff after rows 21–30\n\nRun verify_batch3.py locally to bind notebook/report/PDF hashes and produce the coverage matrix. The original owner assignments and Done cells require member review. Row 23 remains partial until Kaggle Run All, accessible team links, official submission and confirmation are verified. Remaining ten-row batch: 31–40. The test set has been revealed; no further tuning may use its scores.'))
 nb = nbf.v4.new_notebook(cells=cells,metadata={'kernelspec':{'display_name':'Python 3','language':'python','name':'python3'},'language_info':{'name':'python','version':'3.12'}})
 target = root/'notebooks'/'milestone1.ipynb'
 nbf.write(nb,target)

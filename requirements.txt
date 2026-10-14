@@ -8,3 +8,4 @@ ipykernel>=6.29,<8
 shap>=0.47,<0.54
 lime==0.2.0.1
 reportlab>=4,<5
+pypdf>=5,<7

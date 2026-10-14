@@ -2,7 +2,7 @@
   "explained_model": "Random forest",
   "SHAP_method": "Permutation SHAP, two permutation cycles per row; 32 training background rows; fallback after TreeSHAP failed the external probability-additivity check",
   "validation_sample_rows": 48,
-  "initial_TreeSHAP_max_additivity_error": 0.003532331643025244,
+  "initial_TreeSHAP_max_additivity_error": 0.003532331643025355,
   "background_source": "training rows only",
   "SHAP_max_additivity_error": 7.771561172376096e-16,
   "local_predicted_probability": 0.7734225070079116,

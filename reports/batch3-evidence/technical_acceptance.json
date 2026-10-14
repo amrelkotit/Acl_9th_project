@@ -1,0 +1,43 @@
+{
+  "rows_in_scope": [
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "model_choice_manifest_unchanged": true,
+  "raw_files_unchanged": true,
+  "accuracy_target": {
+    "target": 0.8,
+    "target_source": "User instruction, 14 October 2026; ordinary binary accuracy",
+    "selection_metric_unchanged": "validation average precision",
+    "selected_model": "Random forest",
+    "selected_test_accuracy": 0.9010339734121122,
+    "all_three_test_models_meet_target": true,
+    "always_no_podium_test_accuracy": 0.8493353028064993,
+    "interpretation": "Historical held-out performance, not a guarantee for future races. The majority baseline already exceeds 80%; report podium precision/recall/F1 and ranking metrics as well. No changes are chosen using revealed test scores."
+  },
+  "cleaning": {
+    "tables_checked": 14,
+    "foreign_key_relationships_checked": 23,
+    "cohort_rows": 25011,
+    "model_rows": 8931,
+    "conversion_failures": 0,
+    "historical_cohort_fully_verified": false
+  },
+  "inference_cases_passed": 25,
+  "feature_register_entries": 14,
+  "order_variants": 4,
+  "ablation_variants": 7,
+  "external_PDF_and_notebook_coverage": "Verify using verify_batch3.py after Run All.",
+  "Kaggle_Run_All_verified": false,
+  "all_member_access_review_verified": false,
+  "official_submission_confirmed": false,
+  "Done_cells_to_change": 0
+}
