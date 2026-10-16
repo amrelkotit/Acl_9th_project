@@ -1,0 +1,12 @@
+# Direct notebook dependencies; Kaggle is the reference execution environment.
+# This list is not a frozen environment or a guarantee of identical reruns.
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+tensorflow
+kagglehub
+joblib
+shap
+lime

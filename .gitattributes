@@ -1,0 +1,3 @@
+# Preserve the executed submission notebook and report byte-for-byte.
+*.ipynb -text
+*.pdf binary

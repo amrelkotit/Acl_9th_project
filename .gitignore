@@ -3,6 +3,14 @@
 /data/processed/
 /outputs/
 *.ipynb_checkpoints/
+/data/*.zip
+/data/*.7z
+/data/*.tar*
+/downloads/
+/backups/
+.deps/
+.jupyter/
+.mplconfig/
 
 # Python environments and caches
 .venv/
@@ -10,9 +18,19 @@ venv/
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+env/
+*.egg-info/
 
 # Local credentials and secrets
 kaggle.json
 .env
 .env.*
 !.env.example
+credentials.json
+*.pem
+*.key
+.ipython/
+Thumbs.db
+.DS_Store
